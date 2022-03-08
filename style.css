@@ -1,0 +1,11 @@
+.chart-background{
+    fill:lime;
+    stroke:purple;
+    stroke-width:1
+}
+
+.chart-values{
+    fill:black;
+    stroke:purple;
+    stroke-width:1
+}

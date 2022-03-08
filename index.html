@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SVG Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://unpkg.com/vue@3" defer></script>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="app">
+        <svg height="200" width="200">
+            <polygon class="chart-background" points="0,150 0,50 100,0 200,50 200,150 100,200"/>
+            <!-- to get a quarter size, half all values from original then add a quarter of the height and width to place in middle -->
+            <polygon class="chart-attribute" v-bind:points="stabilityPoints"/>
+            <polygon class="chart-attribute" v-bind:points="playfulnessPoints"/>
+            <polygon class="chart-attribute" v-bind:points="huntingPoints"/>
+            <polygon class="chart-attribute" v-bind:points="agilityPoints"/>
+            <polygon class="chart-attribute" v-bind:points="obediencePoints"/>
+            <polygon class="chart-attribute" v-bind:points="walkingPoints"/>
+        </svg>
+        <button @click="setPoints">Set walkingPoints</button>
+        <button @click="setobediencePoints">Set obediencePoints</button>
+    </body>
+</html>
